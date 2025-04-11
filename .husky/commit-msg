@@ -1,0 +1,16 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🔍 Checking commit message..."
+
+pnpm dlx commitlint --edit "$1"
+RESULT=$?
+
+if [ $RESULT -ne 0 ]; then
+  echo "\n❌ Commit message does not meet the Conventional Commits format."
+  echo "ℹ️  Example: feat: add login page"
+  echo "📖  https://www.conventionalcommits.org/en/v1.0.0/"
+  exit 1
+else
+  echo "✅ Commit message is valid!"
+fi

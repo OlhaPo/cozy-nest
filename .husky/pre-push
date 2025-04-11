@@ -1,0 +1,8 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🧠 Running type check..."
+pnpm run type-check
+
+echo "🧹 Running lint..."
+pnpm run lint
