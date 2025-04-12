@@ -1,7 +1,6 @@
 export default function Home() {
   return (
     <>
-      <header className="text-2xl">here goes header: navigation + logo</header>
       <section>img from insta on full screen </section>
       <section>
         header products in stock. paragrap what products are represented. sanity
