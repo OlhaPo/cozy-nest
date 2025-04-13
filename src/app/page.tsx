@@ -1,7 +1,9 @@
+import Banner from '@components/components/Banner';
+
 export default function Home() {
   return (
-    <>
-      <section>img from insta on full screen </section>
+    <main>
+      <Banner />
       <section>
         header products in stock. paragrap what products are represented. sanity
         + cloudinary
@@ -13,6 +15,6 @@ export default function Home() {
         logo home about shop. shipping FAQ as pages. Lets connect Instagram icon
         Facebook icon This website was designed and developed by Olya Po
       </footer>
-    </>
+    </main>
   );
 }

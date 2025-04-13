@@ -6,7 +6,10 @@ import useNavLinks from './hooks/useNavLinks';
 export default function Header() {
   const links = useNavLinks();
   return (
-    <nav className="flex justify-center items-center gap-10 text-lg uppercase">
+    <nav
+      className="w-full flex justify-center items-center gap-10 text-lg uppercase bg-[#F8F5F2] z-10 relative shadow-custom-shadow"
+      style={{ fontFamily: 'var(--font-lato), sans-serif' }}
+    >
       <ul className="flex gap-6 hover:cursor-pointer">
         {links.map((link) => (
           <li key={link.href}>
