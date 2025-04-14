@@ -7,22 +7,32 @@ export default function Header() {
   const links = useNavLinks();
   return (
     <nav
-      className="w-full flex justify-center items-center gap-10 text-lg uppercase bg-[#F8F5F2] z-10 relative shadow-custom-shadow"
+      className="text-lg uppercase z-10 relative shadow-custom-shadow"
       style={{ fontFamily: 'var(--font-lato), sans-serif' }}
     >
-      <ul className="flex gap-6 hover:cursor-pointer">
-        {links.map((link) => (
-          <li key={link.href}>
-            <Link href={link.href}>{link.label}</Link>
-          </li>
-        ))}
-      </ul>
-      <Image src="./logo-bird.svg" width={150} height={150} alt="logo bird" />
-      <ul className="flex gap-6 hover:cursor-pointer">
-        <li>en</li>
-        <li>pl</li>
-        <li>ua</li>
-      </ul>
+      <div className="max-w-[1200px] mx-auto flex items-center flex-wrap justify-between">
+        <ul className="flex gap-6 hover:cursor-pointer">
+          {links.map((link) => (
+            <li key={link.href}>
+              <Link href={link.href}>{link.label}</Link>
+            </li>
+          ))}
+        </ul>
+        <Link href="/">
+          <Image
+            src="./logo-bird.svg"
+            width={150}
+            height={150}
+            alt="logo bird"
+          />
+        </Link>
+
+        <ul className="flex gap-6 hover:cursor-pointer pl-28">
+          <li>en</li>
+          <li>pl</li>
+          <li>ua</li>
+        </ul>
+      </div>
     </nav>
   );
 }
