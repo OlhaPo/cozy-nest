@@ -2,7 +2,7 @@ export default function Banner() {
   return (
     <section className="bg-[url('/banner-img.jpg')] bg-cover bg-center h-[400px] w-full">
       <header
-        className="text-[#4C4A3F] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center"
+        className="text-[#65483F] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-medium"
         style={{ fontFamily: 'var(--font-quicksand), sans-serif' }}
       >
         <h1 className="text-8xl">cozy nest</h1>

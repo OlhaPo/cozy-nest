@@ -1,12 +1,19 @@
 import type { Metadata } from 'next';
-import { Lato, Quicksand } from 'next/font/google';
+import { Caveat, Lato, Quicksand } from 'next/font/google';
 
 import './globals.css';
+import Footer from '@components/components/common/Footer';
 import Header from '@components/components/common/Header';
 
 const quicksand = Quicksand({
   variable: '--font-quicksand',
   subsets: ['latin'],
+});
+
+const caveat = Caveat({
+  variable: '--font-caveat',
+  subsets: ['latin', 'cyrillic'],
+  weight: ['400'],
 });
 
 const lato = Lato({
@@ -16,7 +23,7 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: 'cozy nest',
+  title: 'Cozy Nest',
   description:
     'Cozy nest of crocheted, sewn & knitted things — with warmth and care',
 };
@@ -28,9 +35,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${quicksand.variable} ${lato.variable} antialiased`}>
+      <body
+        className={`${quicksand.variable} ${lato.variable} ${caveat.variable} antialiased`}
+      >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

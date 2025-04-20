@@ -10,10 +10,6 @@ export default function Home() {
         + cloudinary
       </section>
       <AboutSection />
-      <footer className="text-2xl">
-        logo home about shop. shipping FAQ as pages. Lets connect Instagram icon
-        Facebook icon This website was designed and developed by Olya Po
-      </footer>
     </main>
   );
 }
