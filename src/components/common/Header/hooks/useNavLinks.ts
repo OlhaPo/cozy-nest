@@ -1,6 +1,6 @@
 const useNavLinks = () => {
   const links = [
-    { label: 'catalog', href: '/catalog' },
+    { label: 'in stock', href: '/#in-stock' },
     { label: 'about', href: '/#about' },
     { label: 'contact', href: '/#contacts' },
   ];

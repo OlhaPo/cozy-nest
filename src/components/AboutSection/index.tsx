@@ -16,7 +16,12 @@ export default function AboutSection() {
         </p>
         <p>Inspired by nature, people, cats, and… Pinterest.</p>
         <p>May you feel cozy!</p>
-        <div>
+        <div
+          style={{
+            fontFamily: 'var(--font-caveat), sans-serif',
+            fontSize: '35px',
+          }}
+        >
           <span>— Olya</span>
         </div>
       </div>
