@@ -1,12 +1,19 @@
 @import 'tailwindcss';
 
 body {
-  @apply bg-[#FAF6F1] text-[#4F4E4E];
+  @apply bg-[#F4EFE9] text-[#613b22];
   /* @apply bg-[#F3EEE8]; */
+  /* @apply bg-[#FAF6F1]; */
 }
 
 @layer utilities {
   .shadow-custom-shadow {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+  }
+  .shadow-custom-shadow-header {
+    box-shadow: 0px 0px 20px 0px rgba(109, 64, 35, 0.6);
+  }
+  .shadow-custom-shadow-img {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
   }
 }
