@@ -2,7 +2,10 @@ import Image from 'next/image';
 
 import heartSvg from '@components/assets/heart.svg';
 
-export default function ProductsInStock() {
+import getProductsFromStrapi from './hooks/getProductsFromStrapi.hook.js';
+
+export default async function ProductsInStock() {
+  const products = await getProductsFromStrapi();
   return (
     <section className="border-b-2 border-dashed border-[#814f2d] relative">
       <div className="max-w-[1200px] mx-auto py-25 text-center text-xl">
@@ -16,6 +19,13 @@ export default function ProductsInStock() {
           </p>
           <Image src={heartSvg} width={20} height={20} alt="icon heart" />
         </div>
+       
+          <div className='flex flex-wrap'>
+            {products.map((product) => (<div key={product.id}>
+             <Image src={product.images[0].formats.large.url} width={500} height={500} alt={product.name} /></div>
+            ))}
+          </div>
+      
       </div>
 
       <Image

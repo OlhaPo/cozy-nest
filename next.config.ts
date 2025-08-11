@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'cdn.sanity.io',
-        pathname: '/images/**',
+        hostname: 'superb-birthday-c84a546d28.media.strapiapp.com',
+        pathname: '/**',
       },
     ],
   },
