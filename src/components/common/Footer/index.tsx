@@ -8,7 +8,7 @@ import useFooterLinks from './hooks/useFooterLinks';
 export default function Footer() {
   const links = useFooterLinks();
   return (
-    <footer className="max-w-[1200px] mx-auto flex flex-cols items-center justify-between flex-wrap">
+    <footer className="max-w-[1200px] mx-auto flex flex-cols items-center justify-between flex-wrap py-5">
       <Image
         src="./logo-bird-with-title.svg"
         alt="logo bird with title"
