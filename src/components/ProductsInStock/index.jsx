@@ -1,31 +1,40 @@
 import Image from 'next/image';
+import Link from "next/link";
 
 import heartSvg from '@components/assets/heart.svg';
 
 import getProductsFromStrapi from './hooks/getProductsFromStrapi.hook.js';
+import ImagesWrapper from "@components/components/common/ImagesWrapper/index.jsx";
 
 export default async function ProductsInStock() {
   const products = await getProductsFromStrapi();
   return (
     <section className="border-b-2 border-dashed border-[#814f2d] relative">
-      <div className="max-w-[1200px] mx-auto py-25 text-center text-xl">
-        <h3 className="uppercase text-4xl font-medium mb-4">
+      <div className="max-w-[1200px] mx-auto px-10 pt-10 pb-30 md:px-0 md:py-25 text-lg text-center md:text-xl">
+        <h3 className="uppercase text-3xl md:text-4xl font-medium mb-4">
           products in stock
         </h3>{' '}
-        <div className="flex justify-center gap-1">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-2 mb-10">
           <p>
             Here you can see what items are currently available. Hopefully you
             could find yours!
-          </p>
-          <Image src={heartSvg} width={20} height={20} alt="icon heart" />
+          </p> 
+            <Image src={heartSvg} width={20} height={20} alt="icon heart" className='hidden md:block'/>
+         
+          
         </div>
        
-          <div className='flex flex-wrap'>
-            {products.map((product) => (<div key={product.id}>
-             <Image src={product.images[0].formats.large.url} width={500} height={500} alt={product.name} /></div>
+           <ImagesWrapper  options={{
+            // theme: "light",
+              Carousel: {
+                infinite: true,
+          },
+        }}>          
+            {products.map((product) => (<div key={product.id} className='w-[350px] h-[350px]' >
+             <Link href={product.images[0].formats.large.url} data-fancybox="gallery"><Image src={product.images[0].formats.large.url} width={500} height={350} className='w-full h-full object-cover' alt={product.name} /></Link></div>
             ))}
-          </div>
-      
+          </ImagesWrapper>
+     
       </div>
 
       <Image
@@ -33,14 +42,14 @@ export default async function ProductsInStock() {
         width={800}
         height={736}
         alt="image of cat walking"
-        className="w-18 h-18 absolute bottom-[-6px] right-70"
+        className="w-15 h-15 md:w-18 md:h-18 absolute bottom-[-6px] right-3/4 md:right-70"
       />
       <Image
         src="/sewing-machine.svg"
         width={512}
         height={469}
         alt="image of sewing machine"
-        className="w-22 h-22 absolute bottom-[-4px] right-30"
+        className="w-19 h-19 md:w-22 md:h-22 absolute bottom-[-4px] right-[30%] md:right-30"
       />
     </section>
   );
