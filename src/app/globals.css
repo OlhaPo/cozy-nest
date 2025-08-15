@@ -2,8 +2,6 @@
 
 body {
   @apply bg-[#F4EFE9] text-[#613b22];
-  /* @apply bg-[#F3EEE8]; */
-  /* @apply bg-[#FAF6F1]; */
 }
 
 @layer utilities {
@@ -17,8 +15,3 @@ body {
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
   }
 }
-
-/* html[data-fancybox-theme='light'] .f-carousel__nav .f-button svg {
-  color: #000;
-  fill: #000;
-} */

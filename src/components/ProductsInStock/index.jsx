@@ -1,15 +1,12 @@
 import Image from 'next/image';
 import Link from "next/link";
-
-import heartSvg from '@components/assets/heart.svg';
-
 import getProductsFromStrapi from './hooks/getProductsFromStrapi.hook.js';
 import ImagesWrapper from "@components/components/common/ImagesWrapper/index.jsx";
 
 export default async function ProductsInStock() {
   const products = await getProductsFromStrapi();
   return (
-    <section className="border-b-2 border-dashed border-[#814f2d] relative">
+    <section className="border-b-2 border-dashed border-[#814f2d] relative" id="in-stock">
       <div className="max-w-[1200px] mx-auto px-10 pt-10 pb-30 md:px-0 md:py-25 text-lg text-center md:text-xl">
         <h3 className="uppercase text-3xl md:text-4xl font-medium mb-4">
           products in stock
@@ -28,8 +25,8 @@ export default async function ProductsInStock() {
               Carousel: {
                 infinite: true,
           },
-        }}>          
-            {products.map((product) => (<div key={product.id} className='w-[300px] h-[300px] md:w-[350px] md:h-[350px] mx-auto shadow-custom-shadow-img' >
+        }}>       
+            {products.map((product) => (<div key={product.id} className='w-full aspect-[1/1] md:w-[350px] shadow-custom-shadow-img' >
              <Link href={product.images[0].formats.large.url} data-fancybox="gallery"><Image src={product.images[0].formats.large.url} width={500} height={350} className='w-full h-full object-cover' alt={product.name} /></Link></div>
             ))}
           </ImagesWrapper>
