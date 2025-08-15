@@ -4,7 +4,7 @@ export default function AboutSection() {
   return (
     <section className="border-b-2 border-[#814f2d] relative">
       <div className="max-w-[1200px] flex flex-col md:flex-row gap-8 md:gap-32 mx-auto pt-10 pb-30 px-10 md:px-0 md:py-25 items-center text-xl">
-        <div className="md:w-1/2 space-y-4">
+        <div className="md:w-1/2 space-y-2 md:space-y-4">
           <h3 className="text-3xl font-medium mb-4">Welcome to cozy nest!</h3>
           <p>
             Here handmade items come to life — recycled fabrics transform into
@@ -17,14 +17,14 @@ export default function AboutSection() {
           </p>
           <p>Inspired by nature, people, cats, and… Pinterest.</p>
           <p>May you feel cozy!</p>
-          <div
+          <span
             style={{
               fontFamily: 'var(--font-caveat), sans-serif',
-              fontSize: '40px',
             }}
+            className="text-right md:text-left text-[40px]"
           >
-            <span>— Olya</span>
-          </div>
+            — Olga
+          </span>
         </div>
 
         <Image
@@ -40,14 +40,14 @@ export default function AboutSection() {
         width={545}
         height={708}
         alt="image of cat walking"
-        className="w-8 h-8 md:w-10 md:h-10 absolute bottom-[-2px] right-10 md:left-70"
+        className="w-8 h-8 md:w-10 md:h-10 absolute bottom-[-2px] right-[55%] md:left-70"
       />
       <Image
         src="/cat-streching.svg"
         width={500}
         height={500}
         alt="image of cat streching"
-        className="w-18 h-18 md:w-22 md:h-22 absolute bottom-[-2px] right-30 md:left-30"
+        className="w-18 h-18 md:w-22 md:h-22 absolute bottom-[-2px] right-[73%] md:left-30"
       />
     </section>
   );
