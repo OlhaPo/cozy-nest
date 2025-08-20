@@ -1,4 +1,8 @@
-export default function Banner() {
+import { getTranslations } from 'next-intl/server';
+
+export default async function Banner() {
+  const t = await getTranslations('Banner');
+
   return (
     <section className="bg-[url('/banner-img.jpg')] shadow-custom-shadow relative bg-cover bg-center h-[500px] md:h-[600px]">
       <header
@@ -9,7 +13,7 @@ export default function Banner() {
           cozy nest
         </h1>
         <h2 className="text-[22px] md:text-3xl lg:text-4xl mt-6 font-semibold text-[#814f2d] text-shadow-sm">
-          simple things with warmth and care
+          {t('subtitle')}
         </h2>
       </header>
     </section>

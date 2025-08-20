@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from "next/link";
 import getProductsFromStrapi from './hooks/getProductsFromStrapi.hook.js';
-import ImagesWrapper from "@components/components/common/ImagesWrapper/index.jsx";
 
 export default async function ProductsInStock() {
   const products = await getProductsFromStrapi();
@@ -13,14 +12,20 @@ export default async function ProductsInStock() {
         </h3>{' '}
         <div className="mb-10">
           <p>
-            Here you can see what items are currently available. Click on any picture to view the photo carousel.
-            <Image src="/heart.svg" width={18} height={18} alt="icon heart" className='md:w-[20px] md:h-[20px] inline-block ml-2 mb-1'/>   
-          </p>    
-          <p>
-            </p>           
+            Here you can see what items are currently available. Click on any
+            picture to view the photo carousel.
+            <Image
+              src="/heart.svg"
+              width={18}
+              height={18}
+              alt="icon heart"
+              className="md:w-[20px] md:h-[20px] inline-block ml-2 mb-1"
+            />
+          </p>
+          <p></p>
         </div>
-       
-           <ImagesWrapper  options={{
+        <ImagesWrapper
+          options={{
             // theme: "light",
               Carousel: {
                 infinite: true,
