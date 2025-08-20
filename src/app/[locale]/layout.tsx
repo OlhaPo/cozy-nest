@@ -1,9 +1,13 @@
 import type { Metadata } from 'next';
-import { Caveat, Lato, Quicksand } from 'next/font/google';
-
 import './globals.css';
+import { Caveat, Lato, Quicksand } from 'next/font/google';
+import { notFound } from 'next/navigation';
+// eslint-disable-next-line import/named
+import { NextIntlClientProvider, hasLocale } from 'next-intl';
+
 import Footer from '@components/components/common/Footer';
 import Header from '@components/components/common/Header';
+import { routing } from '@components/i18n/routing';
 
 const quicksand = Quicksand({
   variable: '--font-quicksand',
@@ -23,23 +27,31 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: 'Cozy Nest',
+  title: 'cozy nest — simple things with warmth and care',
   description:
-    'Cozy nest of crocheted, sewn & knitted things — with warmth and care',
+    'cozy nest of crocheted, sewn & knitted things — with warmth and care',
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body
         className={`${quicksand.variable} ${lato.variable} ${caveat.variable} antialiased`}
       >
-        <Header />
-        {children}
+        <NextIntlClientProvider locale={locale}>
+          <Header />
+          {children}
+        </NextIntlClientProvider>
         <Footer />
       </body>
     </html>

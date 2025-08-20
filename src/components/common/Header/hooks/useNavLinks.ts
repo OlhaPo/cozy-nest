@@ -1,8 +1,12 @@
+import { useTranslations } from 'next-intl';
+
 const useNavLinks = () => {
+  const t = useTranslations('Navigation');
+
   const links = [
-    { label: 'in stock', href: '/#in-stock' },
-    { label: 'about', href: '/#about' },
-    { label: 'contact', href: '/#contacts' },
+    { label: t('about'), href: '/#about' },
+    { label: t('in-stock'), href: '/#in-stock' },
+    { label: t('contact'), href: '/#contacts' },
   ];
   return links;
 };
