@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from "next/link";
 import getProductsFromStrapi from './hooks/getProductsFromStrapi.hook.js';
+import ImagesWrapper from '@components/components/common/ImagesWrapper/index.jsx';
 
 export default async function ProductsInStock() {
   const products = await getProductsFromStrapi();
