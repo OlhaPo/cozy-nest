@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function AboutSection() {
   return (
-    <section className="border-b-2 border-[#814f2d] relative">
+    <section className="border-b-2 border-[#814f2d] relative" id="about">
       <div className="max-w-[1200px] flex flex-col md:flex-row gap-8 md:gap-32 mx-auto pt-10 pb-30 px-10 md:px-0 md:py-25 items-center text-xl">
         <div className="md:w-1/2 space-y-2 md:space-y-4">
           <h3 className="text-3xl font-medium mb-4">Welcome to cozy nest!</h3>

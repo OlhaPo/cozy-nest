@@ -44,7 +44,7 @@ export default async function RootLayout({
     notFound();
   }
   return (
-    <html lang={locale}>
+    <html lang={locale} className="scroll-smooth">
       <body
         className={`${quicksand.variable} ${lato.variable} ${caveat.variable} antialiased`}
       >

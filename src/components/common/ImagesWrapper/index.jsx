@@ -24,7 +24,7 @@ function ImagesWrapper(props) {
 
   return (
     <div
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 justify-center"
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10"
       ref={containerRef}
     >
       {props.children}

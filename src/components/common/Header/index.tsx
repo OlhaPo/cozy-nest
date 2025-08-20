@@ -7,14 +7,19 @@ export default function Header() {
   const links = useNavLinks();
   return (
     <nav
-      className="text-lg uppercase z-10 relative shadow-custom-shadow"
+      className="text-xl uppercase z-10 relative shadow-custom-shadow"
       style={{ fontFamily: 'var(--font-lato), sans-serif' }}
     >
-      <div className="max-w-[1200px] mx-auto flex items-center flex-wrap justify-between">
+      <div className="max-w-[1200px] mx-auto flex items-center flex-wrap justify-between text-[#5a3620] font-medium">
         <ul className="flex gap-6 hover:cursor-pointer">
           {links.map((link) => (
             <li key={link.href}>
-              <Link href={link.href}>{link.label}</Link>
+              <Link
+                href={link.href}
+                className="hover:cursor-pointer hover:text-[#c36f4b] hover:underline"
+              >
+                {link.label}
+              </Link>
             </li>
           ))}
         </ul>
@@ -27,10 +32,10 @@ export default function Header() {
           />
         </Link>
 
-        <ul className="flex gap-6 hover:cursor-pointer pl-28">
-          <li>en</li>
-          <li>pl</li>
-          <li>ua</li>
+        <ul className="flex gap-6 pl-28">
+          <li className="hover:cursor-pointer hover:text-[#c36f4b]">en</li>
+          <li className="hover:cursor-pointer hover:text-[#c36f4b]">pl</li>
+          <li className="hover:cursor-pointer hover:text-[#c36f4b]">ua</li>
         </ul>
       </div>
     </nav>
