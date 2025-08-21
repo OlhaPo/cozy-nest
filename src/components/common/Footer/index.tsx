@@ -13,20 +13,20 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#e8e1d6] text-xl" id="contact">
-      <div className="max-w-[1200px] py-3 md:pt-10 md:pb-5 md:mx-auto flex flex-col items-end md:items-stretch md:flex-row md:justify-between gap-8 md:gap-0 px-10 md:px-0">
+      <div className="max-w-[1200px] py-10 md:pt-10 md:pb-5 md:mx-auto flex flex-col items-end md:items-stretch md:flex-row md:justify-between gap-8 md:gap-0 px-10 md:px-0">
         <Link
           href="/"
-          className="cursor-pointer hover:scale-115 transition-transform duration-200"
+          className="cursor-pointer hover:scale-115 transition-transform duration-200 hidden md:block"
         >
           <Image
             src="/logo-bird-with-title.svg"
             alt="logo bird with title"
             width={120}
             height={120}
-            className="md:ml-[-17px] md:-mt-5 hidden md:block"
+            className="md:ml-[-17px] md:-mt-5"
           />
         </Link>
-        <div className="flex flex-col items-end md:items-start gap-3 hover:cursor-pointer md:mx-20">
+        <div className="flex flex-col items-end md:items-start gap-2 md:gap-3 hover:cursor-pointer md:mx-20">
           <h3 className="uppercase">{t('social-media')}</h3>
           <span className="flex gap-5">
             <a href={INSTAGRAM_LINK}>
@@ -68,7 +68,7 @@ export default function Footer() {
           <br />
           <a
             href={GITHUB_LINK}
-            className="hover:cursor-pointer hover:text-[#c36f4b] hover:underline"
+            className="hover:cursor-pointer text-[#814f2d] hover:text-[#c36f4b] underline"
           >
             {t('website-credits-name')}
           </a>

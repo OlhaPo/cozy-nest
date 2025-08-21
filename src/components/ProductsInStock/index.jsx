@@ -16,11 +16,11 @@ export default async function ProductsInStock() {
         </h3>{' '}
         <div className="mb-10">
           <p>
-           <span>{t('paragraph-1')}</span>
+           {t('paragraph-1')}
             <Image
               src="/heart.svg"
-              width={18}
-              height={18}
+              width={16}
+              height={16}
               alt="icon heart"
               className="md:w-[20px] md:h-[20px] inline-block ml-2 mb-1"
             />

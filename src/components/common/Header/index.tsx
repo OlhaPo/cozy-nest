@@ -1,16 +1,34 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
+import { MdMenu } from 'react-icons/md';
 
 import useNavLinks from './hooks/useNavLinks';
 
 export default function Header() {
   const links = useNavLinks();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const handleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
   return (
     <nav
       className="text-xl uppercase z-10 relative shadow-custom-shadow"
       style={{ fontFamily: 'var(--font-lato), sans-serif' }}
     >
-      <div className="max-w-[1200px] mx-auto flex items-center flex-wrap justify-between text-[#5a3620] font-medium">
+      <div className="flex justify-between px-8">
+        <Link href="/">
+          <Image src="/logo-bird.svg" width={90} height={90} alt="logo bird" />
+        </Link>
+        <button onClick={handleMobileMenu}>
+          <MdMenu size={35} />
+        </button>
+      </div>
+
+      <div className="hidden max-w-[1200px] mx-auto md:flex items-center flex-wrap justify-between text-[#5a3620] font-medium">
         <ul className="flex gap-6 hover:cursor-pointer">
           {links.map((link) => (
             <li key={link.href}>
@@ -38,6 +56,10 @@ export default function Header() {
           <li className="hover:cursor-pointer hover:text-[#c36f4b]">ua</li>
         </ul>
       </div>
+
+      {/* {isMobileMenuOpen && (
+        
+      )} */}
     </nav>
   );
 }
