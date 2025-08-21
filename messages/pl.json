@@ -6,5 +6,23 @@
   },
   "Banner": {
     "subtitle": "proste rzeczy z ciepłem i troską"
+  },
+  "About": {
+    "title": "Witam w cozy nest!",
+    "paragraph-1": "Tutaj ręcznie robione rzeczy ożywają — recyklingowane tkaniny zmieniają się w torby, woreczki, kosmetyczki i poduszki z nasionami lnu, a włóczka przekształca się w skarpety, szaliki, kołnierzyki i amigurumi.",
+    "paragraph-2": "Wkładam troskę w każdy detal, szyjąc i szydełkując w moim przytulnym kąciku, spoglądając na tuje za oknem.",
+    "paragraph-3": "Inspiruję się naturą, ludźmi, kotami i… Pinterestem.",
+    "paragraph-4": "Niech będzie Ci tutaj przytulnie!",
+    "ending": "— Olga"
+  },
+  "In-stock": {
+    "title": "produkty dostępne",
+    "paragraph-1": "Tutaj możesz zobaczyć, jakie produkty są aktualnie dostępne. Kliknij dowolne zdjęcie, aby zobaczyć zdjęcia w karuzeli."
+  },
+  "Footer": {
+    "website-credits": "Projekt i realizacja",
+    "website-credits-name": "Olga Po",
+    "social-media": "Pozostańmy w kontakcie",
+    "how-to-order": "Jak złożyć zamówienie"
   }
 }

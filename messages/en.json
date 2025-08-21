@@ -6,5 +6,23 @@
   },
   "Banner": {
     "subtitle": "simple things with warmth and care"
+  },
+  "About": {
+    "title": "Welcome to cozy nest!",
+    "paragraph-1": "Here handmade items come to life — recycled fabrics transform into tote, drawstring, cosmetic bags and flaxseed pillows, and yarn turns into socks, scarves, collars and amigurumi.",
+    "paragraph-2": "I put care into every detail, sewing and crocheting in my cozy corner while gazing at the thuja trees outside my window.",
+    "paragraph-3": "Inspired by nature, people, cats, and… Pinterest.",
+    "paragraph-4": "May you feel cozy here!",
+    "ending": "— Olya"
+  },
+  "In-stock": {
+    "title": "products in stock",
+    "paragraph-1": "Here you can see what items are currently available. Click on any picture to view the photo carousel."
+  },
+  "Footer": {
+    "website-credits": "Website designed & developed",
+    "website-credits-name": "Olya Po",
+    "social-media": "Let's connect",
+    "how-to-order": "How to order"
   }
 }

@@ -25,7 +25,7 @@ export default function Header() {
         </ul>
         <Link href="/">
           <Image
-            src="./logo-bird.svg"
+            src="/logo-bird.svg"
             width={150}
             height={150}
             alt="logo bird"
