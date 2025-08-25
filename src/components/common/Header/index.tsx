@@ -40,14 +40,7 @@ export default function Header() {
             </li>
           ))}
         </ul>
-        <Link href="/">
-          <Image
-            src="/logo-bird.svg"
-            width={150}
-            height={150}
-            alt="logo bird"
-          />
-        </Link>
+        <Image src="/logo-bird.svg" width={150} height={150} alt="logo bird" />
 
         <ul className="flex gap-6 pl-28">
           <li className="hover:cursor-pointer hover:text-[#c36f4b]">en</li>
@@ -57,11 +50,10 @@ export default function Header() {
       </div>
 
       <div className="flex justify-between px-8 md:hidden">
-        <Link href="/">
-          <Image src="/logo-bird.svg" width={90} height={90} alt="logo bird" />
-        </Link>
+        <Image src="/logo-bird.svg" width={90} height={90} alt="logo bird" />
         <button onClick={handleMobileMenu}>
-          {isMobileMenuOpen ? <MdClose size={35} /> : <MdMenu size={35} />}
+          {!isMobileMenuOpen && <MdMenu size={35} />}
+          {isMobileMenuOpen && <MdClose size={35} />}
         </button>
       </div>
 
