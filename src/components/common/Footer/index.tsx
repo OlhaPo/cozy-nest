@@ -4,7 +4,7 @@ import { FaInstagram, FaFacebook } from 'react-icons/fa';
 
 import { Link } from '@components/i18n/navigation';
 
-import { GITHUB_LINK, INSTAGRAM_LINK, FB_LINK } from './contants';
+import { LINKEDIN_LINK, INSTAGRAM_LINK, FB_LINK } from './contants';
 // import useFooterLinks from './hooks/useFooterLinks';
 
 export default function Footer() {
@@ -12,7 +12,7 @@ export default function Footer() {
   const t = useTranslations('Footer');
 
   return (
-    <footer className="bg-[#e8e1d6] text-xl" id="contact">
+    <footer className="bg-[#e8e1d6] text-xl" id="contacts">
       <div className="max-w-[1200px] py-10 md:pt-10 md:pb-5 md:mx-auto flex flex-col items-end md:items-stretch md:flex-row md:justify-between gap-8 md:gap-0 px-10 md:px-0">
         <Link
           href="/"
@@ -67,7 +67,7 @@ export default function Footer() {
           {t('website-credits')}
           <br />
           <a
-            href={GITHUB_LINK}
+            href={LINKEDIN_LINK}
             className="hover:cursor-pointer text-[#814f2d] hover:text-[#c36f4b] underline"
           >
             {t('website-credits-name')}

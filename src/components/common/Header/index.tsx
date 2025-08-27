@@ -1,15 +1,19 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import { useState, useEffect } from 'react';
 import { MdMenu, MdClose } from 'react-icons/md';
 
+import { Link } from '@components/i18n/navigation';
+
+import LanguageSwitcher from '../LanguageSwitcher';
 import useNavLinks from './hooks/useNavLinks';
 
 export default function Header() {
   const links = useNavLinks();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const t = useTranslations('Mobile-menu');
 
   useEffect(() => {
     if (isMobileMenuOpen) {
@@ -41,12 +45,7 @@ export default function Header() {
           ))}
         </ul>
         <Image src="/logo-bird.svg" width={150} height={150} alt="logo bird" />
-
-        <ul className="flex gap-6 pl-28">
-          <li className="hover:cursor-pointer hover:text-[#c36f4b]">en</li>
-          <li className="hover:cursor-pointer hover:text-[#c36f4b]">pl</li>
-          <li className="hover:cursor-pointer hover:text-[#c36f4b]">ua</li>
-        </ul>
+        <LanguageSwitcher />
       </div>
 
       <div className="flex justify-between px-8 md:hidden">
@@ -58,24 +57,33 @@ export default function Header() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="w-full p-8 h-screen z-1000 flex flex-col border-t-2 border-[#814f2d]/80 border-dashed uppercase bg-[#e8e1d6]">
-          <ul className="flex flex-col gap-4 text-right my-20">
-            {links.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="hover:cursor-pointer hover:text-[#c36f4b] hover:underline"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <ul className="flex gap-6 justify-end">
-            <li className="hover:cursor-pointer hover:text-[#c36f4b]">en</li>
-            <li className="hover:cursor-pointer hover:text-[#c36f4b]">pl</li>
-            <li className="hover:cursor-pointer hover:text-[#c36f4b]">ua</li>
-          </ul>
+        <div className="w-full p-8 h-[calc(100vh-90px)] justify-between z-1000 flex flex-col border-t-2 border-[#814f2d]/80 border-dashed uppercase bg-[#e8e1d6]">
+          <div>
+            <ul className="flex flex-col gap-4 text-right pt-10">
+              {links.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="hover:cursor-pointer hover:text-[#c36f4b] hover:underline"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <LanguageSwitcher />
+          </div>
+
+          <div className="flex justify-center gap-2">
+            <Image
+              src="/pawprints.svg"
+              width={25}
+              height={25}
+              alt="cat paw print"
+            />
+            <p className="normal-case">{t('mobile-menu-footer')}</p>
+          </div>
         </div>
       )}
     </nav>
