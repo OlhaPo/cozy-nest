@@ -13,7 +13,9 @@ export default function LanguageSwitcher() {
 
   const handleLanguageChange = (newLocale: Locale) => {
     if (newLocale === currentLocale) return;
-    // save to LS: isMobileMenuOpen: true
+
+    // localStorage.setItem('mobileMenuOpen', 'true');
+
     router.replace(pathname, { locale: newLocale });
   };
 

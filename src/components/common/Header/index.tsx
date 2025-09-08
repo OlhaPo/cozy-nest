@@ -15,6 +15,14 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const t = useTranslations('Mobile-menu');
 
+  // useEffect(() => {
+  //   const saveOpenMenuState = localStorage.getItem('mobileMenuOpen');
+  //   if (saveOpenMenuState === 'true') {
+  //     setIsMobileMenuOpen(true);
+  //     localStorage.removeItem('mobileMenuOpen');
+  //   }
+  // }, []);
+
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';

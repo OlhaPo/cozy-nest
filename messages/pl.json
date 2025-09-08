@@ -27,5 +27,10 @@
     "website-credits-name": "Olga Po",
     "social-media": "Pozostańmy w kontakcie",
     "how-to-order": "Jak złożyć zamówienie"
+  },
+  "Not-found": {
+    "title": "Ups... Nie udało się znaleźć tej strony.",
+    "paragraph": "Sprawdź, czy adres został wpisany poprawnie.",
+    "link-home": "Do strony głównej"
   }
 }
