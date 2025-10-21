@@ -6,7 +6,7 @@ export default async function notFound() {
   const t = await getTranslations('Not-found');
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center">
+    <div className="h-screen flex flex-col items-center justify-center px-10 md:px-0">
       <h2 className="text-xl md:text-2xl mb-2 font-medium">{t('title')}</h2>
       <p className="text-lg md:text-xl mb-20">{t('paragraph')}</p>
       <Link

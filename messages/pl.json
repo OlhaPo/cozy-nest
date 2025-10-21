@@ -28,6 +28,14 @@
     "social-media": "Pozostańmy w kontakcie",
     "how-to-order": "Jak złożyć zamówienie"
   },
+  "How-to-order": {
+    "paragraph-1": "Podczas gdy pracuję nad kartą produktu i funkcją koszyka (przepraszam za tymczasowe niedogodności — stay tuned, trwają prace nad klasyczną wersją strony), zamówienie można złożyć w następujący sposób:",
+    "step-1": "Wybierz produkt, który Ci się spodobał.",
+    "step-2": "Zrób zrzut ekranu wybranego produktu.",
+    "step-3": "Wyślij go do mnie na e-mail lub w wiadomości na Instagramie / Facebooku.",
+    "paragraph-2": "Szybko się z Tobą skontaktuję, ustalę wszystkie szczegóły i pomogę złożyć zamówienie.",
+    "paragraph-3": "Jeśli nie znajdziesz dokładnie tego, czego szukasz — z przyjemnością wykonam dla Ciebie zamówienie indywidualne. Mam wystarczająco dużo „chomikowych” zapasów tkanin i włóczki."
+  },
   "Not-found": {
     "title": "Ups... Nie udało się znaleźć tej strony.",
     "paragraph": "Sprawdź, czy adres został wpisany poprawnie.",

@@ -15,3 +15,24 @@ body {
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
   }
 }
+
+.order-step {
+  @apply flex items-start min-h-[50px] md:min-h-18 relative;
+}
+
+.order-step::after {
+  @apply absolute block h-full w-[2px] left-[13px] md:left-5 bg-[#c36f4b] -z-50;
+  content: ' ';
+}
+
+.order-step:last-child::after {
+  @apply hidden;
+}
+
+.order-step p {
+  @apply leading-5 ml-3 mt-1 md:mt-2;
+}
+
+.order-step .step-number {
+  @apply flex bg-[#c36f4b] rounded-full w-7 h-7 md:w-10 md:h-10 flex-shrink-0 justify-center items-center;
+}

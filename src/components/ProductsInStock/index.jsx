@@ -10,7 +10,7 @@ export default async function ProductsInStock() {
 
   return (
     <section className="border-b-2 border-dashed border-[#814f2d] relative" id="in-stock">
-      <div className="max-w-[1200px] mx-auto px-10 pt-10 pb-30 md:px-0 md:py-25 text-lg text-center md:text-xl">
+      <div className="max-w-[1200px] mx-auto px-10 pt-10 pb-30 md:px-20 xl:px-0 md:py-25 text-lg text-center md:text-xl">
         <h3 className="uppercase text-[28px] md:text-4xl font-medium mb-4">
           {t('title')}
         </h3>{' '}
@@ -33,7 +33,7 @@ export default async function ProductsInStock() {
                 infinite: true,
           },
         }}>       
-            {products.map((product) => (<div key={product.id} className='w-full aspect-[1/1] md:w-[350px] shadow-custom-shadow-img' >
+            {products.map((product) => (<div key={product.id} className='w-full aspect-[1/1] xl:w-[350px] shadow-custom-shadow-img' >
              <Link href={product.images[0].formats.large.url} data-fancybox="gallery"><Image src={product.images[0].formats.large.url} width={500} height={350} className='w-full h-full object-cover' alt={product.name} /></Link></div>
             ))}
           </ImagesWrapper>
@@ -52,7 +52,7 @@ export default async function ProductsInStock() {
         width={512}
         height={469}
         alt="image of sewing machine"
-        className="w-19 h-19 md:w-22 md:h-22 absolute bottom-[-4px] right-[10%] md:right-30"
+        className="w-19 h-19 md:w-22 md:h-22 absolute bottom-[-4px] right-[10%] xl:right-30"
       />
     </section>
   );

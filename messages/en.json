@@ -28,6 +28,14 @@
     "social-media": "Let's connect",
     "how-to-order": "How to order"
   },
+  "How-to-order": {
+    "paragraph-1": "While I’m working on the product page and the shopping cart features (sorry for the temporary inconvenience — stay tuned, the classic website is under development), you can place an order in the following way:",
+    "step-1": "Choose the item you like.",
+    "step-2": "Take a screenshot of the selected item.",
+    "step-3": "Send it to me by email or in a message on Instagram / Facebook.",
+    "paragraph-2": "I’ll get in touch with you soon, confirm all the details, and help you place your order.",
+    "paragraph-3": "If you don’t find exactly what you’re looking for — I’ll be happy to make a custom order for you. Believe me, I’ve got quite the stash of fabric and yarn."
+  },
   "Not-found": {
     "title": "Oops... This page could not be found.",
     "paragraph": "Please check that the address is entered correctly.",

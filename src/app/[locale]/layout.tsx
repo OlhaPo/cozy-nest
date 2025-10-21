@@ -44,9 +44,9 @@ export default async function RootLayout({
     notFound();
   }
   return (
-    <html lang={locale} className="scroll-smooth">
+    <html lang={locale} className="scroll-smooth min-h-screen">
       <body
-        className={`${quicksand.variable} ${lato.variable} ${caveat.variable} antialiased`}
+        className={`${quicksand.variable} ${lato.variable} ${caveat.variable} antialiased min-h-screen flex flex-col`}
       >
         <NextIntlClientProvider locale={locale}>
           <Header />

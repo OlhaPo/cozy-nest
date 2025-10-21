@@ -39,7 +39,7 @@ export default function Header() {
       className="text-xl relative shadow-custom-shadow"
       style={{ fontFamily: 'var(--font-lato), sans-serif' }}
     >
-      <div className="hidden max-w-[1200px] md:mx-auto md:flex md:items-center md:flex-wrap md:justify-between text-[#5a3620] font-medium uppercase">
+      <div className="hidden max-w-[1200px] md:px-20 xl:px-0 md:mx-auto md:flex md:items-center md:flex-wrap md:justify-between text-[#5a3620] font-medium uppercase">
         <ul className="flex gap-6 hover:cursor-pointer">
           {links.map((link) => (
             <li key={link.href}>
