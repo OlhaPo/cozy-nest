@@ -10,7 +10,7 @@ export default async function ProductsInStock() {
 
   return (
     <section className="border-b-2 border-dashed border-[#814f2d] relative" id="in-stock">
-      <div className="max-w-[1200px] mx-auto px-10 pt-10 pb-30 md:px-20 xl:px-0 md:py-25 text-lg text-center md:text-xl">
+      <div className="max-w-[1200px] mx-auto px-10 pt-10 pb-30 md:px-20 xl:px-0 md:pt-25 md:pb-40 text-lg text-center md:text-xl">
         <h3 className="uppercase text-[28px] md:text-4xl font-medium mb-4">
           {t('title')}
         </h3>{' '}

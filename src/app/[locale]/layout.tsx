@@ -27,7 +27,7 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: 'cozy nest — simple things with warmth and care',
+  title: 'kocie nest — simple things with warmth and care',
   description:
     'cozy nest of crocheted, sewn & knitted things — with warmth and care',
 };

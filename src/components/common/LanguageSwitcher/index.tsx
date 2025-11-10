@@ -20,7 +20,7 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <ul className="flex gap-6 justify-end md:justify-normal pt-20 md:pt-0 md:pl-28">
+    <ul className="flex gap-6 md:gap-4 lg:gap-6 justify-end md:justify-normal pt-20 md:pt-0 md:pl-20 lg:pl-28">
       {routing.locales.map((locale) => {
         const isActive = currentLocale === locale;
 

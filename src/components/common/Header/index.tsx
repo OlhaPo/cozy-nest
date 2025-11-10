@@ -36,11 +36,11 @@ export default function Header() {
   };
   return (
     <nav
-      className="text-xl relative shadow-custom-shadow"
+      className="text-base lg:text-xl relative shadow-custom-shadow py-4 lg:py-6"
       style={{ fontFamily: 'var(--font-lato), sans-serif' }}
     >
       <div className="hidden max-w-[1200px] md:px-20 xl:px-0 md:mx-auto md:flex md:items-center md:flex-wrap md:justify-between text-[#5a3620] font-medium uppercase">
-        <ul className="flex gap-6 hover:cursor-pointer">
+        <ul className="flex gap-4 lg:gap-6 hover:cursor-pointer">
           {links.map((link) => (
             <li key={link.href}>
               <Link
@@ -52,12 +52,12 @@ export default function Header() {
             </li>
           ))}
         </ul>
-        <Image src="/logo-bird.svg" width={150} height={150} alt="logo bird" />
+        <Image src="/logo.svg" width={90} height={90} alt="logo cat" />
         <LanguageSwitcher />
       </div>
 
       <div className="flex justify-between px-8 md:hidden">
-        <Image src="/logo-bird.svg" width={90} height={90} alt="logo bird" />
+        <Image src="/logo.svg" width={70} height={70} alt="logo cat" />
         <button onClick={handleMobileMenu}>
           {!isMobileMenuOpen && <MdMenu size={35} />}
           {isMobileMenuOpen && <MdClose size={35} />}
