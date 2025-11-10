@@ -6,13 +6,33 @@ export default async function AboutSection() {
 
   return (
     <section className="border-b-2 border-[#814f2d] relative" id="about">
-      <div className="max-w-[1200px] flex flex-col md:flex-row gap-8 xl:gap-32 mx-auto pt-10 pb-30 px-10 md:px-20 xl:px-0 md:pt-25 md:pb-40 items-center md:items-start xl:items-center text-lg md:text-xl">
-        <div className="md:w-1/2 space-y-2 md:space-y-4">
+      <div className="max-w-[1200px] grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-16 mx-auto pt-10 pb-30 px-10 md:px-20 xl:px-0 md:pt-25 md:pb-40 items-center md:items-start xl:items-center text-lg md:text-xl">
+        <div className="space-y-2 md:space-y-4">
           <h3 className="text-[28px] font-medium mb-4">{t('title')}</h3>
           <p>{t('paragraph-1')}</p>
           <p>{t('paragraph-2')}</p>
+        </div>
+
+        <Image
+          src="/about-section-img.jpg"
+          width={675}
+          height={445}
+          alt="image of hands and sewing machine"
+          className="rounded-s shadow-custom-shadow-img"
+        />
+
+        <Image
+          src="/about-section-img-with-cat.jpg"
+          width={600}
+          height={427}
+          alt="image of me, cat and sewing machine"
+          className="rounded-s shadow-custom-shadow-img"
+        />
+
+        <div className="space-y-2 md:space-y-4">
           <p>{t('paragraph-3')}</p>
           <p>{t('paragraph-4')}</p>
+          <p>{t('paragraph-5')}</p>
           <p
             style={{
               fontFamily: 'var(--font-caveat), sans-serif',
@@ -22,14 +42,6 @@ export default async function AboutSection() {
             {t('ending')}
           </p>
         </div>
-
-        <Image
-          src="/about-section-img.jpg"
-          width={675}
-          height={445}
-          alt="image of hands and sewing machine"
-          className="md:w-2/3 rounded-s shadow-custom-shadow-img"
-        />
       </div>
       <Image
         src="/yarn-ball.svg"

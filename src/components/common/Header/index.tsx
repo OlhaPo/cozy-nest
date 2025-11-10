@@ -36,10 +36,10 @@ export default function Header() {
   };
   return (
     <nav
-      className="text-base lg:text-xl relative shadow-custom-shadow py-4 lg:py-6"
+      className="text-base lg:text-xl relative shadow-custom-shadow"
       style={{ fontFamily: 'var(--font-lato), sans-serif' }}
     >
-      <div className="hidden max-w-[1200px] md:px-20 xl:px-0 md:mx-auto md:flex md:items-center md:flex-wrap md:justify-between text-[#5a3620] font-medium uppercase">
+      <div className="hidden max-w-[1200px] md:px-20 xl:px-0 md:mx-auto md:flex md:items-center md:flex-wrap md:justify-between text-[#5a3620] font-medium uppercase py-6">
         <ul className="flex gap-4 lg:gap-6 hover:cursor-pointer">
           {links.map((link) => (
             <li key={link.href}>
@@ -56,7 +56,7 @@ export default function Header() {
         <LanguageSwitcher />
       </div>
 
-      <div className="flex justify-between px-8 md:hidden">
+      <div className="flex justify-between px-8 md:hidden py-4">
         <Image src="/logo.svg" width={70} height={70} alt="logo cat" />
         <button onClick={handleMobileMenu}>
           {!isMobileMenuOpen && <MdMenu size={35} />}
