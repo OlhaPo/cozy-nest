@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
-import Link from "next/link";
+import Link from 'next/link';
 import getProductsFromStrapi from './hooks/getProductsFromStrapi.hook.js';
 import ImagesWrapper from '@components/components/common/ImagesWrapper/index.jsx';
 
@@ -9,14 +9,17 @@ export default async function ProductsInStock() {
   const t = await getTranslations('In-stock');
 
   return (
-    <section className="border-b-2 border-dashed border-[#814f2d] relative" id="in-stock">
-      <div className="max-w-[1200px] mx-auto px-10 pt-10 pb-30 md:px-20 xl:px-0 md:pt-25 md:pb-40 text-lg text-center md:text-xl">
+    <section
+      className="border-b-2 border-dashed border-[#814f2d] relative"
+      id="in-stock"
+    >
+      <div className="max-w-[1400px] mx-auto px-10 pt-10 pb-30 md:px-20 xl:px-0 md:pt-25 md:pb-40 text-lg text-center lg:text-xl">
         <h3 className="uppercase text-[28px] md:text-4xl font-medium mb-4">
           {t('title')}
         </h3>{' '}
         <div className="mb-10">
           <p>
-           {t('paragraph-1')}
+            {t('paragraph-1')}
             <Image
               src="/heart.svg"
               width={16}
@@ -24,20 +27,36 @@ export default async function ProductsInStock() {
               alt="icon heart"
               className="md:w-[20px] md:h-[20px] inline-block ml-2 mb-1"
             />
-          </p>          
+          </p>
         </div>
         <ImagesWrapper
           options={{
             // theme: "light",
-              Carousel: {
-                infinite: true,
-          },
-        }}>       
-            {products.map((product) => (<div key={product.id} className='w-full aspect-[1/1] xl:w-[350px] shadow-custom-shadow-img' >
-             <Link href={product.images[0].formats.large.url} data-fancybox="gallery"><Image src={product.images[0].formats.large.url} width={500} height={350} className='w-full h-full object-cover' alt={product.name} /></Link></div>
-            ))}
-          </ImagesWrapper>
-     
+            Carousel: {
+              infinite: true,
+            },
+          }}
+        >
+          {products.map((product) => (
+            <div
+              key={product.id}
+              className="w-full aspect-[1/1] xl:w-[350px] shadow-custom-shadow-img"
+            >
+              <Link
+                href={product.images[0].formats.large.url}
+                data-fancybox="gallery"
+              >
+                <Image
+                  src={product.images[0].formats.large.url}
+                  width={500}
+                  height={350}
+                  className="w-full h-full object-cover"
+                  alt={product.name}
+                />
+              </Link>
+            </div>
+          ))}
+        </ImagesWrapper>
       </div>
 
       <Image

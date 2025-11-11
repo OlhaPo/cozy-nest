@@ -6,8 +6,8 @@ export default async function AboutSection() {
 
   return (
     <section className="border-b-2 border-[#814f2d] relative" id="about">
-      <div className="max-w-[1200px] grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-16 mx-auto pt-10 pb-30 px-10 md:px-20 xl:px-0 md:pt-25 md:pb-40 items-center md:items-start xl:items-center text-lg md:text-xl">
-        <div className="space-y-2 md:space-y-4">
+      <div className="max-w-[1300px] grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-6 lg:gap-16 mx-auto pt-10 pb-30 px-10 md:px-20 xl:px-0 md:pt-25 md:pb-40 items-center lg:items-start xl:items-center text-lg lg:text-xl">
+        <div className="space-y-2 md:space-y-4 lg:space-y-6">
           <h3 className="text-[28px] font-medium mb-4">{t('title')}</h3>
           <p>{t('paragraph-1')}</p>
           <p>{t('paragraph-2')}</p>

@@ -19,7 +19,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#e8e1d6] text-base lg:text-xl" id="contacts">
-      <div className="max-w-[1200px] py-10 md:py-6 lg:py-10 md:mx-auto flex flex-col items-end md:items-stretch md:flex-row md:justify-between gap-8 md:gap-0 px-10 md:px-20 xl:px-0">
+      <div className="max-w-[1300px] py-10 md:py-6 lg:py-10 md:mx-auto flex flex-col items-end md:items-stretch md:flex-row md:justify-between gap-8 md:gap-0 px-10 md:px-20 xl:px-0">
         <Link
           href="/"
           className="cursor-pointer hover:scale-115 transition-transform duration-200 hidden md:block"

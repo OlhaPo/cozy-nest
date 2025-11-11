@@ -39,7 +39,7 @@ export default function Header() {
       className="text-base lg:text-xl relative shadow-custom-shadow"
       style={{ fontFamily: 'var(--font-lato), sans-serif' }}
     >
-      <div className="hidden max-w-[1200px] md:px-20 xl:px-0 md:mx-auto md:flex md:items-center md:flex-wrap md:justify-between text-[#5a3620] font-medium uppercase py-6">
+      <div className="hidden max-w-[1300px] md:px-20 xl:px-0 md:mx-auto md:flex md:items-center md:flex-wrap md:justify-between text-[#5a3620] font-medium uppercase py-6">
         <ul className="flex gap-4 lg:gap-6 hover:cursor-pointer">
           {links.map((link) => (
             <li key={link.href}>
@@ -52,7 +52,13 @@ export default function Header() {
             </li>
           ))}
         </ul>
-        <Image src="/logo.svg" width={90} height={90} alt="logo cat" />
+        <Image
+          src="/logo.svg"
+          width={64}
+          height={64}
+          alt="logo cat"
+          className="w-16 h-16 xl:w-22 xl:h-22"
+        />
         <LanguageSwitcher />
       </div>
 
