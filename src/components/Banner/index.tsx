@@ -12,7 +12,7 @@ export default async function Banner() {
         <h1 className="text-[42px] md:text-6xl xl:text-8xl tracking-wide text-shadow-lg">
           {t('title')}
         </h1>
-        <h2 className="text-2xl md:text-3xl lg:text-4xl mt-2 md:mt-8 font-semibold text-[#814f2d] text-shadow-sm leading-10">
+        <h2 className="text-xl md:text-3xl lg:text-4xl mt-2 md:mt-8 font-semibold text-[#814f2d] text-shadow-sm leading-7 md:leading-10">
           {t('subtitle')}
         </h2>
       </header>
