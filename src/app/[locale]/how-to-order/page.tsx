@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 export default function HowToOrderPage() {
   const t = useTranslations('How-to-order');
   return (
-    <div className="max-w-[1200px] flex-grow py-15 px-10 md:px-20 xl:px-0 md:py-30 mx-auto text-lg lg:text-xl">
+    <div className="max-w-[1200px] flex-grow py-15 px-10 md:px-20 lg:px-30 xl:px-0 md:py-30 mx-auto text-lg lg:text-xl">
       <p>{t('paragraph-1')}</p>
       <div className="text-[15px] md:text-[17px] lg:text-[20px] my-5 md:mt-15">
         <div className="order-step">

@@ -27,9 +27,9 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: 'kocie nest - simple handmade things for calm and cozy',
+  title: 'kocie nest — simple handmade things about calm and cozy living',
   description:
-    'a cozy nest of crocheted, sewn & knitted handmade items that bring comfort and simplicity into everyday life.',
+    'a cozy nest of crocheted, sewn & knitted handmade items that bring calmness, coziness and simplicity into everyday life.',
 };
 
 export default async function RootLayout({
