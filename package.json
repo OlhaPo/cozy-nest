@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "postbuild": "next-sitemap"
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
@@ -24,6 +25,7 @@
     "next": "15.2.4",
     "next-intl": "^4.3.4",
     "next-sanity": "^9.10.2",
+    "next-sitemap": "^4.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0"

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.kocienest.pl/
+
+# Sitemaps
+Sitemap: https://www.kocienest.pl/sitemap.xml
